@@ -3,8 +3,8 @@ const tail = require('./tail');
 
 const map = (arr, appliedFunction) => {
 	let result = [];
-	result = mapFunction(arr, appliedFunction, result);
-	return result;
+
+	return mapFunction(arr, appliedFunction, result);
 }
 
 function mapFunction(arr, appliedFunction, result){

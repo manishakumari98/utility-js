@@ -10,9 +10,8 @@ const reduce = (arr, appliedFunction, accumulator) => {
 		if(accumulator == undefined){
 			result = '';
 		}
-		result = reduceFunction(arr, appliedFunction, result);
 		
-		return result;
+		return reduceFunction(arr, appliedFunction, result);
 	}
 }
 

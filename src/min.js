@@ -1,9 +1,9 @@
 const tail = require('./tail');
 
 const min = (arr) => {
-	minNum = arr[0];
-	result = minFunction(arr, minNum);
-	return minNum;
+	let minNum = arr[0];
+
+	return minFunction(arr, minNum);
 }
 
 function minFunction(arr, minNum){
@@ -16,4 +16,5 @@ function minFunction(arr, minNum){
 		return minFunction(tail(arr), minNum);
 	}
 }
+
 module.exports = min;

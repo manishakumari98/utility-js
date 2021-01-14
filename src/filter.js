@@ -3,8 +3,8 @@ const tail = require('./tail');
 
 const filter = (arr, appliedFunction) => {
 	let result = [];
-	result = filterFunction(arr, appliedFunction, result);
-	return result;
+
+	return filterFunction(arr, appliedFunction, result);
 }
 
 function filterFunction(arr, appliedFunction, result){
@@ -13,6 +13,7 @@ function filterFunction(arr, appliedFunction, result){
 	}else{
 		let arrayHead = head(arr);
 		let mappedValue = appliedFunction(arrayHead);
+
 		if(mappedValue){
 			result.push(arrayHead);
 		}

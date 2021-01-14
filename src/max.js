@@ -1,12 +1,12 @@
 const tail = require('./tail');
 
 const max = (arr) => {
-	maxNum = arr[0];
-	result = maxFunction(arr, maxNum);
-	return maxNum;
+	let maxNum = arr[0];
+
+	return maxFunction(arr, maxNum);
 }
 
-function maxFunction(arr){
+function maxFunction(arr, maxNum){
 	if(arr.length == 0){
 		return maxNum;
 	}else{
@@ -16,4 +16,5 @@ function maxFunction(arr){
 		return maxFunction(tail(arr), maxNum);
 	}
 }
+
 module.exports = max;
