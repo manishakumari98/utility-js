@@ -1,3 +1,6 @@
+const head = require('./head');
+const tail = require('./tail');
+
 const reduce = (arr, appliedFunction, accumulator) => {
 	if(arr.length == 0){
 		return accumulator;
@@ -7,10 +10,19 @@ const reduce = (arr, appliedFunction, accumulator) => {
 		if(accumulator == undefined){
 			result = '';
 		}
-		for(let i=0; i<arr.length; i++){
-			result = appliedFunction(result,arr[i]);
-		}
+		result = reduceFunction(arr, appliedFunction, result);
+		
 		return result;
+	}
+}
+
+function reduceFunction(arr, appliedFunction, result){
+	if(arr.length == 0){
+		return result;
+	}else{
+		result = appliedFunction(result, head(arr));
+
+		return reduceFunction(tail(arr), appliedFunction, result);
 	}
 }
 
